@@ -1,0 +1,44 @@
+import { Suspense, lazy } from "react";
+import { MotionConfig } from "framer-motion";
+import Navbar from "./components/NavbarStudio";
+import Hero from "./components/HeroStudio";
+import Skills from "./components/SkillsStudio";
+import About from "./components/AboutStudio";
+import Contact from "./components/ContactStudio";
+import Footer from "./components/FooterStudio";
+import { ExperienceBoundary, SectionSkeleton } from "./components/ExperienceBoundary";
+import ScrollProgress from "./components/ScrollProgress";
+import LiveBackground from "./components/LiveBackground";
+import PortfolioAssistant from "./components/PortfolioAssistant";
+import "./components/live-background.css";
+import { SiteProvider, useSite } from "./lib/SiteContext";
+
+const Projects = lazy(() => import("./components/Projects"));
+
+export default function App() {
+  return <SiteProvider><Portfolio /></SiteProvider>;
+}
+
+function Portfolio() {
+  const { site } = useSite();
+  return (
+    <ExperienceBoundary>
+      <MotionConfig reducedMotion={site.appearance.motion ? "user" : "always"}>
+        <div className="site-shell min-h-screen">
+          {site.appearance.background && <LiveBackground />}
+          <ScrollProgress />
+          <Navbar />
+          <main>
+            <Hero />
+            <Skills />
+            <Suspense fallback={<SectionSkeleton />}><Projects /></Suspense>
+            <About />
+            <Contact />
+          </main>
+          <Footer />
+          {site.appearance.assistant && <PortfolioAssistant />}
+        </div>
+      </MotionConfig>
+    </ExperienceBoundary>
+  );
+}

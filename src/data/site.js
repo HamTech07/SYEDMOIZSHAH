@@ -1,0 +1,51 @@
+import { projects, capabilities } from "./portfolio.js";
+
+export const defaultSite = {
+  revision: 0,
+  profile: {
+    name: "Syed Moiz Ahmed",
+    brand: "Moiz",
+    suffix: ".games",
+    logo: "M",
+    email: "syedmoizahmed466@gmail.com",
+    github: "https://github.com/syedmoiz10",
+    linkedin: "https://www.linkedin.com/in/syed-moiz-ahmed-6660b634a",
+    fiverr: "https://www.fiverr.com/s/1EEdzG6",
+    whatsapp: "https://wa.me/923228666773",
+    role: "Unity Game Developer · 3D Artist",
+    location: "Pakistan",
+    portrait: "/images/moiz-portrait.png",
+    pageTitle: "Syed Moiz Ahmed — Unity Game Developer",
+    description: "Syed Moiz Ahmed is a Unity game developer and 3D artist working with Unity, C#, Blender and interactive game systems.",
+  },
+  hero: {
+    badge: "Unity game developer · available for projects",
+    title: "I build playable worlds with",
+    highlight: "Unity & imagination.",
+    description: "I’m Syed Moiz Ahmed — a game developer who brings ideas to life through Unity gameplay systems, C# and expressive 3D art made in Blender.",
+    button: "Explore my games",
+  },
+  about: {
+    title: "From a blank scene to a world players can explore.",
+    intro: "I’m Syed Moiz Ahmed, a Unity game developer with 2.5+ years of experience building interactive game experiences. I enjoy shaping the full journey: from the first playable mechanic to the details that make a game feel alive.",
+    description: "My workflow brings together Unity, C# and Blender for gameplay, 3D assets, animation and Android builds. I care about responsive controls, clear feedback and a polished player experience.",
+    education: "Unity & C#",
+    university: "Gameplay and interactive systems",
+    availability: "Freelance game projects",
+  },
+  contact: {
+    badge: "Open to game development work",
+    title: "Let’s make something players remember.",
+    description: "Have a game idea, a prototype to finish or a world that needs building? Get in touch and let’s talk about it.",
+    response: "Reach out through email, WhatsApp or Fiverr",
+  },
+  headings: {
+    skills: "Game development, from model to mechanic.",
+    skillsDescription: "Explore the tools and craft behind Moiz’s Unity and 3D workflow.",
+    projects: "Built to be played.",
+    projectsDescription: "A collection of Android game builds. Open a project to see its details or download its APK.",
+  },
+  appearance: { background: true, motion: true, assistant: true, theme: "dark", accent: "#7c65f5" },
+  projects,
+  capabilities,
+};
